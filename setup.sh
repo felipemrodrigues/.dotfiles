@@ -8,15 +8,15 @@ BLUE=`tput bold; tput setaf 4`
 MAGENTA=`tput bold; tput setaf 5`
 
 echo ""
-echo "${GREEN}Welcome to the installation process :)${NOCOLOR}"
+echo "${GREEN}Hey!${NOCOLOR}"
 
 echo ""
-echo "${YELLOW}The installer will use this dir: "
+echo "${YELLOW}Selected folder: "
 cd ~
 pwd
 echo "${NOCOLOR}"
 
-echo "${MAGENTA}Dotfiles${NOCOLOR}"
+echo "${MAGENTA}Downloading dotfiles...${NOCOLOR}"
 echo ""
 echo "- ${GREEN}Cloning felipemrodrigues/dotfiles.git...${NOCOLOR}"
 if [ ! -d "$DOTFILESDIR" ]; then
@@ -25,12 +25,14 @@ else
     cd "$DOTFILESDIR" && git pull && cd ~
 fi
 
+echo "Dotfiles downloaded"
 echo ""
-echo "- ${GREEN}Making links${NOCOLOR}"
+echo "- ${GREEN}Making links...${NOCOLOR}"
 rm -f ~/.gitconfig ~/.bash_profile ~/.alias ~/.bash_git ~/.bash_prompt
 ln -s .dotfiles/.gitconfig ~/.gitconfig
 ln -s .dotfiles/.bash_profile ~/.bash_profile
 ln -s .dotfiles/.bash_prompt ~/.bash_prompt
 ln -s .dotfiles/.bash_git ~/.bash_git
 ln -s .dotfiles/.alias ~/.alias
+echo "Links done"
 echo ""
