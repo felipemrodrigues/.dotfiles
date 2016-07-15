@@ -16,34 +16,16 @@ export PATH=$PATH:/usr/local/mysql/bin
 
 HISTTIMEFORMAT="%d/%m/%y %T "
 
+if [ -f ~/.bash_git ]; then
+  . ~/.bash_git
+fi
 
-source ~/.dotfiles/runcom/.bash_git
+if [ -f ~/.bash_prompt ]; then
+  . ~/.bash_prompt
+fi
 
-. ~/.dotfiles/runcom/.bash_prompt
-
-source ~/.dotfiles/runcom/.bash_git
-source ~/.dotfiles/runcom/.bash_prompt
-
-
-# Folders shortcuts
-alias cweb='cd ~/Documents/Projects/oi-web'
-alias capi='cd ~/Documents/Projects/oi-api'
-alias cbpass='cd ~/Documents/Projects/bpass'
-alias etc='subl /etc/hosts'
-
-# Git Aliases
-alias gs='git status'
-alias gpu='git pull'
-alias gps='git push'
-alias ga='git add .'
-alias gc='git commit'
-alias gac='git add . && git commit'
-alias gb='git branch'
-alias gch='git checkout'
-alias gcb='git checkout -b'
-alias gl='git log'
-alias removecommit='git reset --hard'
-alias gr='git rebase'
-alias gpsor='git push origin:'
+if [ -f ~/.alias ]; then
+  . ~/.alias
+fi
 
 
