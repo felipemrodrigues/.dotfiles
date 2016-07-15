@@ -1,0 +1,16 @@
+alias etc='subl /etc/hosts'
+
+# Git Aliases
+alias gs='git status'
+alias gpu='git pull'
+alias gps='git push'
+alias ga='git add .'
+alias gc='git commit'
+alias gac='git add . && git commit'
+alias gb='git branch'
+alias gch='git checkout'
+alias gcb='git checkout -b'
+alias gl='git log'
+alias removecommit='git reset --hard'
+alias gr='git rebase'
+alias gpsor='git push origin:'
