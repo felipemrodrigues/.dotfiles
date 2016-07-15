@@ -28,9 +28,9 @@ fi
 echo ""
 echo "- ${GREEN}Making links${NOCOLOR}"
 rm -f ~/.gitconfig ~/.bash_profile ~/.alias ~/.bash_git ~/.bash_prompt
-ln -s .dotfiles/git/.gitconfig ~/.gitconfig
-ln -s .dotfiles/runcom/.bash_profile ~/.bash_profile
-ln -s .dotfiles/runcom/.bash_prompt ~/.bash_prompt
-ln -s .dotfiles/runcom/.bash_git ~/.bash_git
+ln -s .dotfiles/.gitconfig ~/.gitconfig
+ln -s .dotfiles/.bash_profile ~/.bash_profile
+ln -s .dotfiles/.bash_prompt ~/.bash_prompt
+ln -s .dotfiles/.bash_git ~/.bash_git
 ln -s .dotfiles/.alias ~/.alias
 echo ""
