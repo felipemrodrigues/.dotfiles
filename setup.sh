@@ -1,4 +1,5 @@
 DOTFILESDIR=$HOME"/.dotfiles"
+SUBLIMETEXTDIR=$HOME"/Library/Application Support/Sublime Text 3"
 
 NOCOLOR=`tput sgr0`
 GREEN=`tput setaf 2`
@@ -6,6 +7,28 @@ LGREEN=`tput bold; tput setaf 2`
 YELLOW=`tput bold; tput setaf 3`
 BLUE=`tput bold; tput setaf 4`
 MAGENTA=`tput bold; tput setaf 5`
+
+echo "${MAGENTA}Homebrew${NOCOLOR}"
+echo ""
+if [[ ! "$(type -P brew)" ]]; then
+    echo "- ${GREEN}Installing...${NOCOLOR}"
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+    echo "- ${BLUE}Already installed!${NOCOLOR}"
+fi
+
+if [[ "$(type -P brew)" ]]; then
+    echo ""
+    echo "- ${GREEN}Updating...${NOCOLOR}"
+    brew update
+    echo ""
+    echo "- ${GREEN}Analyzing...${NOCOLOR}"
+    brew doctor
+    echo ""
+    echo "- ${GREEN}Installing Formulas...${NOCOLOR}"
+    brew install git node gpg
+fi
+echo ""
 
 echo ""
 echo "${GREEN}Hey!${NOCOLOR}"
@@ -35,4 +58,15 @@ ln -s .dotfiles/.bash_prompt ~/.bash_prompt
 ln -s .dotfiles/.bash_git ~/.bash_git
 ln -s .dotfiles/.alias ~/.alias
 echo "Links done"
+echo ""
+
+echo ""
+echo "${MAGENTA}Sublime Text Configuration${NOCOLOR}"
+echo ""
+echo "- ${GREEN}Cloning felipemrodrigues/sublime-settings.git...${NOCOLOR}"
+if [ ! -d "$SUBLIMETEXTDIR" ]; then
+    git clone git@github.com:felipemrodrigues/sublime-settings.git "$SUBLIMETEXTDIR"
+else
+    cd "$SUBLIMETEXTDIR" && git pull && cd ~
+fi
 echo ""
