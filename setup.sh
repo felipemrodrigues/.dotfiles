@@ -26,7 +26,7 @@ if [[ "$(type -P brew)" ]]; then
     brew doctor
     echo ""
     echo "- ${GREEN}Installing Formulas...${NOCOLOR}"
-    brew install git node gpg
+    brew install git node
 fi
 echo ""
 
