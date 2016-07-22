@@ -1,6 +1,7 @@
-export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH\
 export EDITOR='subl -w'export PATH=/usr/bin:$PATH
 export PATH=$PATH:/usr/local/mysql/bin
+export PATH="/usr/local/bin:$PATH"
 
 if [ -f ~/.bash_git ]; then
   . ~/.bash_git
