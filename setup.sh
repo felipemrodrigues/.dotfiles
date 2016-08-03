@@ -1,5 +1,5 @@
 DOTFILESDIR=$HOME"/.dotfiles"
-SUBLIMETEXTDIR=$HOME"/Library/Application Support/Sublime Text 3"
+SUBLIMETEXTDIR=“~/sublime-settings”
 
 NOCOLOR=`tput sgr0`
 GREEN=`tput setaf 2`
@@ -60,13 +60,13 @@ ln -s .dotfiles/.alias ~/.alias
 echo "Links done"
 echo ""
 
-echo ""
-echo "${MAGENTA}Sublime Text Configuration${NOCOLOR}"
-echo ""
-echo "- ${GREEN}Cloning felipemrodrigues/sublime-settings.git...${NOCOLOR}"
-if [ ! -d "$SUBLIMETEXTDIR" ]; then
-    git clone git@github.com:felipemrodrigues/sublime-settings.git "$SUBLIMETEXTDIR"
-else
-    cd "$SUBLIMETEXTDIR" && git pull && cd ~
-fi
-echo ""
+# echo ""
+# echo "${MAGENTA}Sublime Text Configuration${NOCOLOR}"
+# echo ""
+# echo "- ${GREEN}Cloning felipemrodrigues/sublime-settings.git...${NOCOLOR}"
+# if [ ! -d "$SUBLIMETEXTDIR" ]; then
+#     git clone git@github.com:felipemrodrigues/sublime-settings.git "$SUBLIMETEXTDIR"
+# else
+#     cd "$SUBLIMETEXTDIR" && git pull && cd ~
+# fi
+# echo ""
