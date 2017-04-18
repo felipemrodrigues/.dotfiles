@@ -5,7 +5,7 @@
 ## Install
 
 ```
-git clone https://github.com/felipemrodrigues/.dotfiles
+$ git clone https://github.com/felipemrodrigues/.dotfiles
 $ ./setup.sh
 ```
 
