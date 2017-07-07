@@ -6,7 +6,7 @@
 
 ```
 $ git clone https://github.com/felipemrodrigues/.dotfiles
-$ ./setup.sh
+$ .dotfiles/setup.sh
 ```
 
 ## Features
