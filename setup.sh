@@ -57,7 +57,7 @@ fi
 echo "Dotfiles downloaded"
 echo ""
 echo "- ${GREEN}Making links...${NOCOLOR}"
-rm -f ~/.gitconfig ~/.bash_profile ~/.alias ~/.bash_git ~/.bash_prompt
+rm -f ~/.gitconfig ~/.bash_profile ~/.bash_git ~/.bash_prompt
 ln -s .dotfiles/.gitconfig ~/.gitconfig
 ln -s .dotfiles/.bash_profile ~/.bash_profile
 ln -s .dotfiles/.bash_prompt ~/.bash_prompt
