@@ -60,13 +60,3 @@ ln -s .dotfiles/.alias ~/.alias
 echo "Links done"
 echo ""
 
-# echo ""
-# echo "${MAGENTA}Sublime Text Configuration${NOCOLOR}"
-# echo ""
-# echo "- ${GREEN}Cloning felipemrodrigues/sublime-settings.git...${NOCOLOR}"
-# if [ ! -d "$SUBLIMETEXTDIR" ]; then
-#     git clone git@github.com:felipemrodrigues/sublime-settings.git "$SUBLIMETEXTDIR"
-# else
-#     cd "$SUBLIMETEXTDIR" && git pull && cd ~
-# fi
-# echo ""
