@@ -59,7 +59,7 @@ ln -s .dotfiles/.gitconfig ~/.gitconfig
 ln -s .dotfiles/.bash_profile ~/.bash_profile
 ln -s .dotfiles/.bash_prompt ~/.bash_prompt
 ln -s .dotfiles/.bash_git ~/.bash_git
-ln -s .dotfiles/.alias ~/.alias
+ln -s .dotfiles/.zshrc ~/.zshrc
 echo "Links done"
 echo ""
 
