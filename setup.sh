@@ -8,7 +8,7 @@ YELLOW=`tput bold; tput setaf 3`
 BLUE=`tput bold; tput setaf 4`
 MAGENTA=`tput bold; tput setaf 5`
 
-echo "${MAGENTA}Homebrew${NOCOLOR}"
+echo "${MAGENTA}homebrew${NOCOLOR}"
 echo ""
 if [[ ! "$(type -P brew)" ]]; then
     echo "- ${GREEN}Installing...${NOCOLOR}"
@@ -16,6 +16,9 @@ if [[ ! "$(type -P brew)" ]]; then
 else
     echo "- ${BLUE}Already installed!${NOCOLOR}"
 fi
+
+echo "${MAGENTA}oh my zsh${NOCOLOR}"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 if [[ "$(type -P brew)" ]]; then
     echo ""
