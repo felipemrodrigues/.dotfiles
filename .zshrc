@@ -55,6 +55,14 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git neat)
 
+if [ -f ~/.bash_git ]; then
+  . ~/.bash_git
+fi
+
+if [ -f ~/.bash_prompt ]; then
+  . ~/.bash_prompt
+fi
+
 source $ZSH/oh-my-zsh.sh
 # User configuration
 
