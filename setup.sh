@@ -1,5 +1,4 @@
 DOTFILESDIR=$HOME"/.dotfiles"
-SUBLIMETEXTDIR=“~/sublime-settings”
 
 NOCOLOR=`tput sgr0`
 GREEN=`tput setaf 2`
