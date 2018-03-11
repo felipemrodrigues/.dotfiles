@@ -20,6 +20,9 @@ fi
 echo "${MAGENTA}oh my zsh${NOCOLOR}"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+echo "${MAGENTA}lunchy${NOCOLOR}"
+gem install lunchy
+
 if [[ "$(type -P brew)" ]]; then
     echo ""
     echo "- ${GREEN}Updating...${NOCOLOR}"
