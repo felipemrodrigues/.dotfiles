@@ -110,11 +110,10 @@ alias gbdo='git push origin:'
 alias gch='git checkout'
 alias gcb='git checkout -b'
 alias gl='git log'
-alias removecommit='git reset --hard'
+alias grh='git reset --hard'
 alias gr='git rebase'
 alias grc='git rebase --continue'
 alias grs='git rebase --skip'
 alias gra='git rebase --abort'
-alias gch='git checkout'
 source /Users/feliperodrigues/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="/usr/local/bin:$PATH"
