@@ -1,5 +1,4 @@
 DOTFILESDIR=$HOME"/.dotfiles"
-SUBLIMETEXTDIR=“~/sublime-settings”
 
 NOCOLOR=`tput sgr0`
 GREEN=`tput setaf 2`
@@ -8,7 +7,7 @@ YELLOW=`tput bold; tput setaf 3`
 BLUE=`tput bold; tput setaf 4`
 MAGENTA=`tput bold; tput setaf 5`
 
-echo "${MAGENTA}Homebrew${NOCOLOR}"
+echo "${MAGENTA}homebrew${NOCOLOR}"
 echo ""
 if [[ ! "$(type -P brew)" ]]; then
     echo "- ${GREEN}Installing...${NOCOLOR}"
@@ -16,6 +15,12 @@ if [[ ! "$(type -P brew)" ]]; then
 else
     echo "- ${BLUE}Already installed!${NOCOLOR}"
 fi
+
+echo "${MAGENTA}oh my zsh${NOCOLOR}"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "${MAGENTA}lunchy${NOCOLOR}"
+gem install lunchy
 
 if [[ "$(type -P brew)" ]]; then
     echo ""
@@ -26,7 +31,7 @@ if [[ "$(type -P brew)" ]]; then
     brew doctor
     echo ""
     echo "- ${GREEN}Installing Formulas...${NOCOLOR}"
-    brew install git node
+    brew install git nvm
 fi
 echo ""
 
@@ -51,22 +56,12 @@ fi
 echo "Dotfiles downloaded"
 echo ""
 echo "- ${GREEN}Making links...${NOCOLOR}"
-rm -f ~/.gitconfig ~/.bash_profile ~/.alias ~/.bash_git ~/.bash_prompt
+rm -f ~/.gitconfig ~/.bash_profile ~/.bash_git ~/.bash_prompt
 ln -s .dotfiles/.gitconfig ~/.gitconfig
 ln -s .dotfiles/.bash_profile ~/.bash_profile
 ln -s .dotfiles/.bash_prompt ~/.bash_prompt
 ln -s .dotfiles/.bash_git ~/.bash_git
-ln -s .dotfiles/.alias ~/.alias
+ln -s .dotfiles/.zshrc ~/.zshrc
 echo "Links done"
 echo ""
 
-# echo ""
-# echo "${MAGENTA}Sublime Text Configuration${NOCOLOR}"
-# echo ""
-# echo "- ${GREEN}Cloning felipemrodrigues/sublime-settings.git...${NOCOLOR}"
-# if [ ! -d "$SUBLIMETEXTDIR" ]; then
-#     git clone git@github.com:felipemrodrigues/sublime-settings.git "$SUBLIMETEXTDIR"
-# else
-#     cd "$SUBLIMETEXTDIR" && git pull && cd ~
-# fi
-# echo ""

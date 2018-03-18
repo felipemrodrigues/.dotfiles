@@ -13,4 +13,4 @@ $ .dotfiles/setup.sh
 
 * Homebrew
 * Git
-* Node
+* NVM
